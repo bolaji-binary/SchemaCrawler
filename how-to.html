@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en-US">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="copyright" content="&copy; 2000-2021 Sualeh Fatehi." />
+      <!-- Begin SEO -->
+      <title>SchemaCrawler - Free database schema discovery and comprehension tool</title>
+      <meta property="og:title" content="SchemaCrawler" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
+      <meta property="og:author" content="Sualeh Fatehi" />
+      <meta name="description" content="Free database schema discovery and comprehension tool" />
+      <meta property="og:description" content="Free database schema discovery and comprehension tool" />
+      <link rel="canonical" href="https://www.schemacrawler.com/" />
+      <link rel="icon" href="images/schemacrawler_logo.svg" sizes="any" type="image/svg+xml">
+      <meta property="og:url" content="https://www.schemacrawler.com/" />
+      <meta property="og:image" content="https://www.schemacrawler.com/images/schemacrawler_logo.svg" />
+      <meta property="og:image:type" content="image/svg+xml" />
+      <script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"SchemaCrawler",
+  "description":"Free database schema discovery and comprehension tool",
+  "author":{
+    "@type":"Person",
+    "name":"Sualeh Fatehi",
+    "email":"sualeh@hotmail.com"
+  },
+  "url":"https://www.schemacrawler.com",
+  "image":"https://www.schemacrawler.com/images/schemacrawler_logo.svg",
+  "headline":"SchemaCrawler",
+  "sameAs":[
+    "https://github.com/schemacrawler/SchemaCrawler",
+    "https://www.linkedin.com/company/2826059/"
+  ],
+  "downloadUrl":"http://github.com/schemacrawler/SchemaCrawler/releases/",
+  "softwareVersion":"SchemaCrawler, v16.14.6",
+  "applicationCategory": "Databases, QA, Java, JDBC",
+  "operatingSystem": "Any",
+  "releaseNotes": "https://www.schemacrawler.com/changes-report.html"
+}
+      </script>
+      <!-- End SEO -->
+      <!-- Bootstrap 4.5.3 -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+        crossorigin="anonymous">
+      <!-- End Bootstrap -->
+      <!-- Lightbox2 -->
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+        integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+        crossorigin="anonymous" />
+      <!-- End Lightbox2 -->
+   </head>
+   <body>
+
+      <!-- Bootstrap 4.5.3 -->
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous">
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous">
+      </script>
+      <!-- End Bootstrap -->
+      <!-- Lightbox -->
+      <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+          integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
+          crossorigin="anonymous">
+      </script>
+      <!--  SchemaCrawler styles -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <!-- End Lightbox -->
+
+     <header class="header clearfix">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+           <!-- Links -->
+           <ul class="navbar-nav">
+              <li class="nav-item">
+                 <a class="nav-link" href="consulting.html">Consulting</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="downloads.html">Download</a>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-1" data-toggle="dropdown">
+                 SchemaCrawler
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="index.html">About SchemaCrawler</a>
+                    <a class="dropdown-item" href="getting-started.html">Readme</a>
+                    <a class="dropdown-item" href="who-uses.html">Who Uses</a>
+                    <a class="dropdown-item" href="database-support.html">Database System Support</a>
+                    <a class="dropdown-item" href="downloads.html">Distributions and Downloads</a>
+                    <a class="dropdown-item" href="changes-report.html">Change History</a>
+                    <a class="dropdown-item" href="license.html">License</a>
+                    <a class="dropdown-item" href="building.html">Building From Source Code</a>
+                    <a class="dropdown-item" href="consulting.html">Support and Consulting</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-2" data-toggle="dropdown">
+                 Features
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="config.html">Configuration</a>
+                    <a class="dropdown-item" href="output.html">Text Output</a>
+                    <a class="dropdown-item" href="diff.html">Diff</a>
+                    <a class="dropdown-item" href="schemacrawler-grep.html">Grep</a>
+                    <a class="dropdown-item" href="diagramming.html">Diagramming</a>
+                    <a class="dropdown-item" href="scripting.html">Scripting</a>
+                    <a class="dropdown-item" href="lint.html">Lint</a>
+                    <a class="dropdown-item" href="serialize.html">Serialization</a>
+                    <a class="dropdown-item" href="weak-associations.html">Weak Associations</a>
+                    <a class="dropdown-item" href="offline.html">Offline Snapshots</a>
+                    <a class="dropdown-item" href="plugins.html">Plugins</a>
+                    <a class="dropdown-item" href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a>
+                    <a class="dropdown-item" href="attributes.html">Extensions Using Catalog Attributes</a>
+                    <a class="dropdown-item" href="schemacrawler-shell.html">SchemaCrawler Interactive Shell</a>
+                    <a class="dropdown-item" href="docker-image.html">Docker Image</a>
+                    <a class="dropdown-item" href="https://github.com/schemacrawler/SchemaCrawler-Report-Maven-Plugin">SchemaCrawler Report Maven Plugin</a>
+
+                    <a class="dropdown-item" href="https://github.com/schemacrawler/SchemaCrawler-Action">SchemaCrawler Action for GitHub Actions</a>
+                    <a class="dropdown-item" href="webapp.html">SchemaCrawler Web Application</a>
+                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop-3" data-toggle="dropdown">
+                 Resources
+                 </a>
+                 <div class="dropdown-menu">
+                    <a class="dropdown-item" href="getting-started.html">Getting Started</a>
+                    <a class="dropdown-item" href="resources.html">Resources</a>
+                    <a class="dropdown-item" href="code-examples.html">Code Examples</a>
+                    <a class="dropdown-item" href="faq.html">FAQS</a>
+                    <a class="dropdown-item" href="how-to.html">How-tos</a>
+                    <a class="dropdown-item" href="consulting.html">Get Help</a>
+                    <a class="dropdown-item" href="apidocs/index.html">Javadocs</a>
+                    <a class="dropdown-item" href="http://github.com/schemacrawler/SchemaCrawler">Project Page on GitHub</a>
+                 </div>
+              </li>
+           </ul>
+        </nav>
+
+        <div id="banner" class="jumbotron jumbotron-fluid bg-light">
+          <div class="container-fluid">
+            <img class="img-fluid mr-5" style="display: block; float: left; width: 7.0rem;" src="images/schemacrawler_logo.svg" alt="Schemacrawler logo" />
+            <h1>SchemaCrawler</h1>
+            <p class="lead">Free database schema discovery and comprehension tool</p>
+          </div>
+        </div>
+
+     </header>
+
+     <main>
+        <div id="page-content" class="container-fluid">
+
+<!-- PAGE CONTENT -- START -->
+
+<!-- markdownlint-disable MD024 -->
+<h1>SchemaCrawler - How-to</h1>
+<h2>SchemaCrawler Command-line</h2>
+<ol>
+<li><a href="#command-line">How to run the SchemaCrawler command-line</a></li>
+</ol>
+<h2>Include and Exclude Stuff from the Output</h2>
+<ol>
+<li><a href="#excluded-tables">How to see why certain tables or columns for excluded</a></li>
+<li><a href="#include-significant-columns">How to include only significant columns - that is, columns that are part of a primary key or unique index, or columns that are foreign keys</a></li>
+<li><a href="#excluded-tables-or-columns">How to include or exclude certain tables or columns</a></li>
+<li><a href="#excluded-views">How to exclude database views from the output</a></li>
+<li><a href="#excluded-routines">How to exclude routines, that is, stored procedures and functions from the output</a></li>
+<li><a href="#excluded-functions">How to exclude database functions from the output</a></li>
+<li><a href="#excluded-remarks">How to exclude database table and column remarks or comments from the output</a></li>
+<li><a href="#case-insensitive">How to do case-insenstive filtering</a></li>
+</ol>
+<h2>Create diff-able Output</h2>
+<ol>
+<li><a href="#sorting">How to sort columns, foreign-keys and indexes alphabetically</a></li>
+<li><a href="#diff-data-types">How to diff column data types across databases</a></li>
+<li><a href="#ordinal-numbers">How to allow diffs of tables that have columns added in between</a></li>
+<li><a href="#portable-names">How to hide display of object names that can change from server to server</a></li>
+<li><a href="#table-row-counts">How to show table row counts in output and diagrams</a></li>
+<li><a href="#index-names">How to hide foreign key names, constraint names, trigger names, specific names for procedures, or index and primary key names</a></li>
+<li><a href="#hide-schema-names">How to hide catalog and schema names in text output</a></li>
+<li><a href="#hide-schema-colors">How to hide catalog and schema colors in HTML output and schema diagrams</a></li>
+</ol>
+<h2>Integrations</h2>
+<ol>
+<li><a href="#javascript">How to script with your database</a></li>
+<li><a href="#velocity">How to create your own output format</a></li>
+<li><a href="#diagrams">How to create a database diagram of your schema</a></li>
+<li><a href="#graphviz_opts">How to provide additional Graphviz command-line options</a></li>
+<li><a href="#graphviz-java">How to use pure-Java Graphviz</a></li>
+</ol>
+<h2>How to Use SchemaCrawler in Projects</h2>
+<ol>
+<li><a href="#api">How to use SchemaCrawler programmatically</a></li>
+<li><a href="#maven-project">How to use SchemaCrawler in an Apache Maven Project</a></li>
+<li><a href="#ant">How to use SchemaCrawler as an ant Task</a></li>
+<li><a href="#maven-report">How to use SchemaCrawler To Produce an Apache Maven Report</a></li>
+</ol>
+<h2>Advanced SchemaCrawler Usage</h2>
+<ol>
+<li><a href="#definitions">How to get trigger, view, stored procedure and function definitions</a></li>
+<li><a href="#check_constraints">How to obtain check constraints</a></li>
+<li><a href="#create_order">How to get tables in &ldquo;create&rdquo; or &ldquo;drop&rdquo; order</a></li>
+<li><a href="#plugins">How to extend SchemaCrawler by adding a new command, new linter, or new database system support</a></li>
+<li><a href="#configure_linter">How to configure SchemaCrawler linters</a></li>
+<li><a href="#add_new_linter">How to extend SchemaCrawler by adding a new linter</a></li>
+<li><a href="#fail_build_linter">How to fail a build with too many SchemaCrawler lints</a></li>
+<li><a href="#pgsql_materialized_views">How to obtain PostgreSQL materialized views</a></li>
+</ol>
+<hr />
+<h2><a name="command-line">How to Use the SchemaCrawler Command-line</a></h2>
+<p>Explore the SchemaCrawler command-line on <a href="https://www.katacoda.com/schemacrawler">Katacoda</a>.</p>
+<p>Use <code>schemacrawler.Main</code> to launch SchemaCrawler from the command-line. This launch offers a number of connection options, including by JDBC driver and URL, and by a connection defined in a properties configuration file. There are options to load configuration from properties files. JDBC drivers and other external libraries must be available on the classpath for this application to function.</p>
+<p>For help, use the <code>-h</code> command-line switch.</p>
+<hr />
+<h2>Include and Exclude Stuff from the Output</h2>
+<hr />
+<h3><a name="excluded-tables">How to see why certain tables or columns for excluded</a></h3>
+<p>Re-run SchemaCrawler with <code>--log-level=ALL</code> on the command-line.</p>
+<hr />
+<h3><a name="include-significant-columns">How to include only significant columns - that is, columns that are part of a primary key or unique index, or columns that are foreign keys</a></h3>
+<p>Re-run SchemaCrawler with the <code>--info-level=standard --command=brief</code> command-line options.</p>
+<hr />
+<h3><a name="excluded-tables-or-columns">How to include or exclude certain tables or columns</a></h3>
+<p>Change the configuration for the SchemaCrawler the table or column include and exclude patterns in the <code>schemacrawler.config.properties</code> file. The include or exclude specification is a <a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html">Java regular expression</a>. The include pattern is evaluated first, and the exclusions are made from the included tables or columns list. Also see the <a href="faq.html#commands">filtering and grep command-line options.</a></p>
+<hr />
+<h3><a name="excluded-views">How to exclude database views from the output</a></h3>
+<p>Use the <code>--table-types</code> command-line option, without VIEW. For example, you can provide <code>--table-types=TABLE</code>. Further, see the <a href="faq.html#commands">details on the command-line options.</a></p>
+<hr />
+<h3><a name="excluded-routines">How to exclude routines, that is, stored procedures and functions from the output</a></h3>
+<p>The option in the configuration can be overridden by the <code>--routines=</code> command-line option. Further, see the <a href="faq.html#commands">details on the command-line options.</a></p>
+<hr />
+<h3><a name="excluded-functions">How to exclude database functions from the output</a></h3>
+<p>Use the <code>--routine-types=PROCEDURE</code> command-line option. Further, see the <a href="faq.html#commands">details on the command-line options.</a></p>
+<hr />
+<h3><a name="excluded-remarks">How to exclude database table and column remarks or comments from the output</a></h3>
+<p>Use the <code>--no-remarks</code> command-line option. Further, see the <a href="faq.html#commands">details on the command-line options.</a></p>
+<hr />
+<h3><a name="case-insensitive">How to do case-insenstive filtering</a></h3>
+<p>For any SchemaCrawler argument that uses regular expressions, you can use <a href="https://www.regular-expressions.info/refmodifiers.html">mode modifiers</a> for case-insensitive matches. For example, to grep for column names, use a regular expression like <code>--grep-columns='(?i).*data'</code></p>
+<hr />
+<h2>Create diff-able Output</h2>
+<hr />
+<h3><a name="sorting">How to sort columns, foreign-keys and indexes alphabetically</a></h3>
+<p>Change the configuration for the SchemaCrawler &ldquo;sort alphabetically&rdquo; properties in the <a href="config/schemacrawler.config.properties"><code>schemacrawler.config.properties</code></a> file. Also see the <a href="faq.html#commands">sorting command-line options.</a></p>
+<hr />
+<h3><a name="diff-data-types">How to diff column data types across databases</a></h3>
+<p>Change the configuration for the SchemaCrawler <code>schemacrawler.format.show_standard_column_type_names=true</code> in the <code>schemacrawler.config.properties</code> file. This setting will show standard data types across different database systems. On the other hand, if you want to see the real database specific data types, change the setting to a value of true.</p>
+<hr />
+<h3><a name="ordinal-numbers">How to allow diffs of tables that have columns added in between</a></h3>
+<p>When columns are added into a table, they can change the column ordinal number. This can mess up the diffs. Change the configuration for the SchemaCrawler <code>schemacrawler.format.show_ordinal_numbers=false</code> in the <code>schemacrawler.config.properties</code> file. You can combine this setting with the setting to sort columns alphabetically to produce diff friendly output.</p>
+<hr />
+<h3><a name="portable-names">How to hide display of object names that can change from server to server</a></h3>
+<p>Use the <code>--portable-names=true</code> command-line option to allow for easy comparison between databases, by hiding foreign key names, constraint names, trigger names, specific names for procedures, and index and primary key names, and not showing the fully-qualified table name.</p>
+<hr />
+<h3><a name="table-row-counts">How to hide table row counts in output and diagrams</a></h3>
+<p>Hide table row counts in output, and diagrams. Change the configuration for the SchemaCrawler <code>schemacrawler.format.hide_table_row_counts=true</code> in the <code>schemacrawler.config.properties</code> file. Then even if you run SchemaCrawler with the <code>--load-row-counts</code> command-line option, table row counts will not be shown in the output.</p>
+<hr />
+<h3><a name="hide-empty-tables">How to hide empty tables in output and diagrams</a></h3>
+<p>Hide tables with no data in output, and diagrams. Run SchemaCrawler with the <code>--load-row-counts --no-empty-tables</code> command-line options, while table row counts will be shown in the output, empty tables will be omitted.</p>
+<hr />
+<h3><a name="index-names">How to hide foreign key names, constraint names, trigger names, specific names for procedures, or index and primary key names</a></h3>
+<p>If foreign key names, constraint names, trigger names, specific names for procedures, or index and primary key names are not explicitly provided while creating a schema, most database systems assign default names. These names can show up as spurious diffs in SchemaCrawler output. Change the configuration for the following properties in your <code>schemacrawler.config.properties</code> file. All of these names can be hidden by using the <code>--portable-names</code> command-line option.</p>
+<pre><code>schemacrawler.format.hide_primarykey_names=false
+schemacrawler.format.hide_foreignkey_names=false
+#schemacrawler.format.hide_alternatekeys_names=false
+schemacrawler.format.hide_weakassociation_names=false
+schemacrawler.format.hide_index_names=false
+schemacrawler.format.hide_trigger_names=false
+schemacrawler.format.hide_routine_specific_names=false
+schemacrawler.format.hide_constraint_names=false
+</code></pre>
+<hr />
+<h3><a name="hide-schema-names">How to hide catalog and schema names in text output</a></h3>
+<p>Change the configuration for the SchemaCrawler <code>schemacrawler.format.show_unqualified_names=true</code> in the <code>schemacrawler.config.properties</code> file. This setting will show unqualified names of database objects such as tables and procedures. That is, the catalog and schema names will not be displayed. Use with care, especially if you have foreign keys that reference tables in other schemas, or synonyms.</p>
+<hr />
+<h3><a name="hide-schema-colors">How to hide catalog and schema colors in HTML output and schema diagrams</a></h3>
+<p>Change the configuration for the SchemaCrawler <code>schemacrawler.format.no_schema_colors=true</code> in the <code>schemacrawler.config.properties</code> file. This setting will not show color-coded catalog and schema names in HTML and schema diagram output.</p>
+<hr />
+<h2>Integrations</h2>
+<h3><a name="javascript">How to script with your database</a></h3>
+<p>SchemaCrawler has built-in support to be used with JavaScript scripts. Write your JavaScript file, assuming that a &ldquo;catalog&rdquo; variable containing the database schema will be available. A &ldquo;connection&rdquo; variable will also be available, and you will be able to execute SQL against your database. Run SchemaCrawler with the command-line options - <code>--command script --script &lt;your script file&gt;</code> . See the example in the <code>examples\javascript</code> directory for more details.</p>
+<hr />
+<h3><a name="velocity">How to create your own output format</a></h3>
+<p>SchemaCrawler integrates with <a href="https://velocity.apache.org/">Apache Velocity</a> to allow for templated output. Put Velocity on your classpath, and create your template, and run SchemaCrawler with the command-line options <code>--command velocity --template &lt;your Velocity template&gt;</code>. See the Velocity example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download.</p>
+<hr />
+<h3><a name="diagrams">How to create a database diagram of your schema</a></h3>
+<p>SchemaCrawler integrates with <a href="http://www.graphviz.org/">Graphviz</a> to produce graph images. See the diagram example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download. For more details, see the <a href="diagramming.html">diagram section</a>.</p>
+<hr />
+<h3><a name="graphviz_opts">How to provide additional Graphviz command-line options</a></h3>
+<p>SchemaCrawler integrates with <a href="http://www.graphviz.org/">Graphviz</a> to produce graph images. See the previous question for details. You can provide additional Graphviz command-line options using the <code>SC_GRAPHVIZ_OPTS</code> environmental variable, or pass in the additional arguments using the <code>SC_GRAPHVIZ_OPTS</code> Java system property.</p>
+<hr />
+<h3><a name="graphviz-java">How to use pure-Java Graphviz</a></h3>
+<p>In certain situations, it may not be possible to install Graphviz. SchemaCrawler integrates with <a href="https://github.com/nidi3/graphviz-java">nidi3/graphviz-java</a> to provide a pre-Java approach to generating graphs. Download the <a href="https://github.com/schemacrawler/SchemaCrawler/releases">SchemaCrawler distribution</a>, and run through the <code>diagram</code> example. This will download the required jar files automatically.</p>
+<hr />
+<h2>How to Use SchemaCrawler in Projects</h2>
+<hr />
+<h3><a name="api">How to use SchemaCrawler programmatically</a></h3>
+<p>Read <a href="http://www.devx.com/Java/Article/32443">Java API Makes Database Metadata as Easily Accessible as POJOs</a> for an introduction to the SchemaCrawler API. (This article may refer to an older release of the SchemaCrawler API, but the concepts are the same.) You can also browse the <a href="apidocs/index.html">javadocs</a> . <em>See the api example in the <a href="http://github.com/schemacrawler/SchemaCrawler/releases/">SchemaCrawler examples</a> download.</em></p>
+<p>Or, if you are impatient, try code similar to the following:</p>
+<script src="https://gist.github.com/schemacrawler/63e4b8cb0515c6e928e7a9a419f46411.js"></script>
+More code examples are at [Code Examples Using the SchemaCrawler API](code-examples.html).
+<hr />
+<h3><a name="maven-project">How to use SchemaCrawler in an Apache Maven Project</a></h3>
+<p>In order to use SchemaCrawler in your Apache Maven projects, add a dependency to SchemaCrawler in your pom.xml.</p>
+<pre><code class="language-xml">&lt;dependencies&gt;
+  ...
+  &lt;dependency&gt;
+    &lt;groupId&gt;us.fatehi&lt;/groupId&gt;
+    &lt;artifactId&gt;schemacrawler&lt;/artifactId&gt;
+    &lt;version&gt;16.14.6&lt;/version&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+<hr />
+<h3><a name="ant">How to use SchemaCrawler as an ant Task</a></h3>
+<p>Call the SchemaCrawler command-line from ant, using the exec task.</p>
+<hr />
+<h3><a name="maven-report">How to use SchemaCrawler To Produce an Apache Maven Report</a></h3>
+<p>The <a href="https://github.com/schemacrawler/SchemaCrawler-Report-Maven-Plugin">SchemaCrawler Report Maven Plugin</a> can generate database documentation for an Apache Maven-generated website.</p>
+<hr />
+<h2>Advanced SchemaCrawler Usage</h2>
+<hr />
+<h3><a name="definitions">How to get trigger, view, stored procedure and function definitions</a></h3>
+<p><em>See the documentation in <a href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a> .</em></p>
+<hr />
+<h3><a name="check_constraints">How to obtain check constraints</a></h3>
+<p><em>See the documentation in <a href="data-dictionary-extensions.html">Extensions Using the Data Dictionary</a> .</em></p>
+<hr />
+<h3><a name="create_order">How to get tables in &ldquo;create&rdquo; or &ldquo;drop&rdquo; order</a></h3>
+<p>Tables are sorted in alphabetical order by default. If you turn alphabetical sorting off, the tables will be displayed in &ldquo;create&rdquo; order - that is, tables with no foreign-key dependencies will be displayed first. The &ldquo;drop&rdquo; order is the reverse of the &ldquo;create&rdquo; order. Use the following command-line arguments to obtain tables in &ldquo;create&rdquo; order: <code>--command=list --sort-tables=false --routines=</code></p>
+<hr />
+<h3><a name="plugins">How to extend SchemaCrawler by adding a new command, new linter, or new database system support</a></h3>
+<p>See the <a href="plugins.html">SchemaCrawler Plugins</a> page.</p>
+<hr />
+<h3><a name="configure_linter">How to configure SchemaCrawler linters</a></h3>
+<p>See <a href="lint.html">SchemaCrawler Lint</a> for details.</p>
+<hr />
+<h3><a name="add_new_linter">How to extend SchemaCrawler by adding a new linter</a></h3>
+<p>See <a href="lint.html">SchemaCrawler Lint</a> for details.</p>
+<hr />
+<h3><a name="fail_build_linter">How to fail a build with too many SchemaCrawler lints</a></h3>
+<p>See <a href="lint.html">SchemaCrawler Lint</a> for details.</p>
+<hr />
+<h3><a name="pgsql_materialized_views">How to obtain Oracle and PostgreSQL materialized views</a></h3>
+<p>PostgreSQL materialized views are a table type called &ldquo;MATERIALIZED VIEW&rdquo;. Use an additional SchemaCrawler command-line option, <code>&quot;--table-types=TABLE,VIEW,MATERIALIZED VIEW&quot;</code>. Notice the double-quotes, since there is a space between <code>MATERIALIZED</code> and <code>VIEW</code>.</p>
+<hr />
+
+<!-- PAGE CONTENT -- END -->
+
+          </div>
+       </main>
+       <footer class="footer">
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22913512-2"></script>
+          <script>
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'UA-22913512-2');
+          </script>
+          <script>
+            $("table").addClass("table-sm");
+            $("table").addClass("table-bordered");
+            $("table").addClass("table-responsive");
+            $("thead").addClass("thead-dark");
+          </script>
+
+          <!-- Footer with copyright -->
+          <div class="container-fluid">
+            <hr/>
+
+             <div class="alert alert-info" role="alert">
+               <a href="https://www.schemacrawler.com/">SchemaCrawler</a> is free and open-source software.
+               <strong><a href="https://www.paypal.me/sualeh">Donations are appreciated.</a></strong>
+            </div>
+            <div id="footer" xmlns:dc="http://purl.org/dc/elements/1.1/"  class="small">
+              <p id="copyright" property="dc:rights">
+                <span>SchemaCrawler, v16.14.6</span><br />
+                &copy;
+                <span property="dc:dateCopyrighted">2000-2021</span>
+                <span property="dc:creator">Sualeh Fatehi &lt;sualeh@hotmail.com&gt;.</span>
+              </p>
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </div>
+          </div>
+      </footer>
+   </body>
+</html>
